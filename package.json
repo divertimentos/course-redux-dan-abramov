@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0"
   }
 }

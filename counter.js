@@ -1,9 +1,12 @@
-export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
+const counter = (state = 0, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1
+    case 'DECREMENT':
+      return state - 1;
+    default:
+      return state
   }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
 }
+
+module.exports = counter;
