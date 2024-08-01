@@ -1,5 +1,13 @@
 # Redux (Abramov)
 
+<!--toc:start-->
+
+- [Redux (Abramov)](#redux-abramov)
+  - [Reducer](#reducer)
+  - [Store](#store)
+  - [Reimplementando a função `createStore` na mão](#reimplementando-a-função-createstore-na-mão)
+  <!--toc:end-->
+
 ## Reducer
 
 A função que você cria para possuir toda a lógica é o reducer. Um exemplo simples de um reducer é esse `counter` no qual temos uma lógica de incrementar e decrementar números a partir do 0.
