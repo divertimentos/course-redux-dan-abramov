@@ -50,4 +50,4 @@ document.addEventListener("click", () => {
 
 OBS.: esses _snippets_ são meros exemplos. Encare-os como pseudo-JavaScript.
 
-# Reimplementando a função `createStore` na mão
+## Reimplementando a função `createStore` na mão
