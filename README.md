@@ -1,4 +1,4 @@
-# Redux (Abramov)
+# Fundamentals of Redux Course from Dan Abramov
 
 <!--toc:start-->
 
