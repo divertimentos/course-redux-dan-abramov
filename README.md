@@ -51,3 +51,30 @@ document.addEventListener("click", () => {
 OBS.: esses _snippets_ são meros exemplos. Encare-os como pseudo-JavaScript.
 
 ## Reimplementando a função `createStore` na mão
+
+```javascript
+const createStore = (reducer) => {
+  let state;
+  listeners = [];
+
+  const getState = () => state;
+
+  const dispatch = (action) => {
+    state = reducer(state, action);
+    listeners.forEach((listener) => listener());
+  };
+
+  const subscribe = (listener) => {
+    listeners.push(listener);
+    return () => {
+      listeners = listeners.filter((lis) => lis !== listener);
+    };
+  };
+
+  dispatch({});
+
+  return { getState, dispatch, subscribe };
+};
+```
+
+Segundo o Dan Abramov, essa função é muito similar à que existe dentro do código oficial do Redux.
