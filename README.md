@@ -86,3 +86,16 @@ const createStore = (reducer) => {
 ```
 
 Segundo o Dan Abramov, essa função é muito similar à que existe dentro do código oficial do Redux.
+
+## Reimplementando a função `combineReducers`
+
+```javascript
+const combineReducers = (reducer) => {
+  return (state = {}, action) => {
+    return Object.keys(reducers).reduce((nextState, key) => {
+      nextState[key] = reducers[key](state[key], action);
+      return nextState;
+    }, {});
+  };
+};
+```
