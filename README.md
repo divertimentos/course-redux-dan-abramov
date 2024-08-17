@@ -2,10 +2,11 @@
 
 <!--toc:start-->
 
-- [Redux (Abramov)](#redux-abramov)
+- [Fundamentals of Redux Course from Dan Abramov](#fundamentals-of-redux-course-from-dan-abramov)
   - [Reducer](#reducer)
   - [Store](#store)
-  - [Reimplementando a função `createStore` na mão](#reimplementando-a-função-createstore-na-mão)
+  - [Reimplementando a função `createStore`](#reimplementando-a-função-createstore)
+  - [Reimplementando a função `combineReducers`](#reimplementando-a-função-combinereducers)
   <!--toc:end-->
 
 ## Reducer
@@ -99,3 +100,28 @@ const combineReducers = (reducer) => {
   };
 };
 ```
+
+---
+
+(Aprendi com o Dan Abramov que é possível passar a store do Redux pra baixo usando o Context. Redux + Context API. Não sabia que era possível!)
+
+Um componente do tipo `<Provider />` nada mais é que um componente feito para retonar `{children}`.
+
+```javascript
+// exemplo class-based
+class Provider extends Component {
+  getChildContext() {
+    return {
+      store: this.props.store,
+    };
+  }
+
+  render() {
+    return this.props.children;
+  }
+}
+```
+
+(Ok, mais tarde o Abramov falou que precisa de uma porrada de outras configs para que o Provider e o Context funcionem juntos em componentes class-based :clown:)
+
+Este curso está bastante datado; ele mistura classes funções e não incentiva o uso do ContextAPI por ser (à epoca) instável. Eu criei outro repositório chamado [Redux Essentials Tutorial](https://github.com/divertimentos/redux-essentials-tutorial).
