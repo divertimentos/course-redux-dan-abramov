@@ -7,7 +7,10 @@
   - [Store](#store)
   - [Reimplementando a função `createStore`](#reimplementando-a-função-createstore)
   - [Reimplementando a função `combineReducers`](#reimplementando-a-função-combinereducers)
-  <!--toc:end-->
+    
+    <!--toc:end-->
+
+![](https://github.com/divertimentos/course-redux-dan-abramov/blob/main/media/abramov-redux.png)
 
 ## Reducer
 
